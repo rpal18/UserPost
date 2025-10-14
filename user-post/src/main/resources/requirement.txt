@@ -1,0 +1,11 @@
+2. User-Post System (Beginner → Intermediate)
+Goal: One-to-Many relationship + cascading + fetch types
+Entities:
+•	User (id, name, email)
+•	Post (id, title, content, user)
+Tasks:
+•	Save a user with multiple posts
+•	Fetch a user and their posts
+•	Lazy vs Eager fetch experimentation
+•	Delete a user and observe cascading effects
+•	Custom query: fetch posts by user name
