@@ -6,7 +6,7 @@ VALUES ('Amit', 'amit@example.com', '9123456789', '1997-08-20');
 
 --initializing post data with some data to test service methods
 
-INSERT INTO post (title, content, user_user_id)
+INSERT INTO post (title, content, user_id)
 VALUES
 ('Spring Boot Basics', 'Learn the basics of Spring Boot.', 1),
 ('Java Streams', 'Deep dive into Java Streams and functional programming.', 1),

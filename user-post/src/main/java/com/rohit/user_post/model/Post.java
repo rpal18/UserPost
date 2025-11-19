@@ -1,19 +1,12 @@
 package com.rohit.user_post.model;
 
 import jakarta.persistence.*;
-import lombok.*;
 
 @Entity
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@ToString
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int PostId;
-
+    private int id;
     @Column(nullable = false , name = "title")
     private String title ;
 
@@ -25,5 +18,35 @@ public class Post {
     @JoinColumn
     private User user;
 
+    public int getPostId() {
+        return id;
+    }
 
+    public void setPostId(int postId) {
+        id = postId;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 }

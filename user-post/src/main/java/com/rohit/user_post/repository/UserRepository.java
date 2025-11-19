@@ -7,5 +7,7 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 
 
     boolean existsByMobileNumber(String num);
-    boolean existsByUserId(int id);
+    boolean existsById(int id);
+
+    User getUserById(int userI);
 }
