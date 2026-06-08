@@ -10,9 +10,6 @@ import lombok.*;
  */
 @Getter
 @Setter
-
-
-
 @Builder
 public class ApiError {
 

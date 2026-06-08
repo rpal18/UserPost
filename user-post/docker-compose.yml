@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  user-post:
+    build: .
+    ports:
+      - 8081:8081
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/UserPost_db
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=Rohit@12
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Rohit@12
+      POSTGRES_DB: UserPost_db
+    ports:
+        - 5432:5432
+
+
