@@ -4,7 +4,7 @@ services:
   user-post:
     build: .
     ports:
-      - 8081:8081
+      - 80:8081
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/UserPost_db
       - SPRING_DATASOURCE_USERNAME=postgres
@@ -20,5 +20,9 @@ services:
       POSTGRES_DB: UserPost_db
     ports:
         - 5432:5432
+    volumes:
+      - pg_database_storage:/var/lib/postgresql/data
+volumes:
+    pg_database_storage:
 
 
